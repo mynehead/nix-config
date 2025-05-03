@@ -9,10 +9,10 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.device = "/dev/sda";
+  #boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "m3-kratos"; # Define your hostname.
+  networking.hostName = "nixos-nasa"; # Define your hostname.
   # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -47,9 +47,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.m3tam3re = {
+  users.users.erik = {
     isNormalUser = true;
-    description = "m3tam3re";
+    description = "erik";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
   };
@@ -99,5 +99,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }
